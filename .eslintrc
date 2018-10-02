@@ -1,0 +1,22 @@
+{ 
+    "extends": "rallycoding", 
+    "plugins": [ "react", "react-native" ], 
+    "settings": 
+    { 
+        "import/resolver": 
+        { 
+            "node": 
+            { 
+                "extensions": [".js", ".ios.js", ".android.js"] 
+            } 
+        } 
+    },
+    "ecmaFeatures": 
+    { 
+        "jsx": true 
+    },
+    "rules": 
+    { 
+        "react/require-extension": "off"
+    } 
+}
