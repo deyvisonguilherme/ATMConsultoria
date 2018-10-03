@@ -1,22 +1,16 @@
-{ 
-    "extends": "rallycoding", 
-    "plugins": [ "react", "react-native" ], 
-    "settings": 
-    { 
-        "import/resolver": 
-        { 
-            "node": 
-            { 
-                "extensions": [".js", ".ios.js", ".android.js"] 
-            } 
-        } 
-    },
-    "ecmaFeatures": 
-    { 
-        "jsx": true 
-    },
-    "rules": 
-    { 
-        "react/require-extension": "off"
-    } 
+{
+  "env": {
+      "node": true, 
+      "browser": true, 
+      "es6": true 
+  },
+  "parser": "babel-eslint", 
+  "extends": "airbnb",
+  "rules": {
+    "react/prefer-stateless-function": [0, { "ignorePureComponents": "false" }],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "no-unused-vars": ["error", { "vars": "local", "args": "after-used", "ignoreRestSiblings": false }],
+    "react/destructuring-assignment": [0, "always"],
+    "react/prop-types": [0, { "ignore": 0, "customValidators": "" }]
+  }
 }
