@@ -5,12 +5,25 @@
       "es6": true 
   },
   "parser": "babel-eslint", 
-  "extends": "airbnb",
+  "extends": [
+    "airbnb",
+    "prettier",
+    "prettier/react"
+  ],
   "rules": {
     "react/prefer-stateless-function": [0, { "ignorePureComponents": "false" }],
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "no-unused-vars": ["error", { "vars": "local", "args": "after-used", "ignoreRestSiblings": false }],
     "react/destructuring-assignment": [0, "always"],
-    "react/prop-types": [0, { "ignore": 0, "customValidators": "" }]
-  }
+    "react/prop-types": [0, { "ignore": 0, "customValidators": "" }],
+    "prettier/prettier": [
+      "error", 
+      {
+        "trailingComma": "es5",
+        "singleQuote": true,
+        "printWidth": 100
+      }
+    ]
+  },
+  "plugins": [ "prettier" ]
 }

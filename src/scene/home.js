@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-  View,
-  StatusBar,
-  Image,
-  StyleSheet,
-  TouchableHighlight,
-} from 'react-native';
+import { View, StatusBar, Image, StyleSheet, TouchableHighlight } from 'react-native';
 import BarraNavegacao from '../components/barraNavegacao';
 
 const logo = require('../../assets/logo.png');
@@ -48,10 +42,7 @@ export default class HomeScreen extends React.Component {
               activeOpacity={0.3}
               onPress={() => this.props.navigation.navigate('Clients')}
             >
-              <Image
-                style={styles.imgMenu}
-                source={menuCliente}
-              />
+              <Image style={styles.imgMenu} source={menuCliente} />
             </TouchableHighlight>
             <Image style={styles.imgMenu} source={menuContato} />
           </View>
@@ -60,7 +51,6 @@ export default class HomeScreen extends React.Component {
             <Image style={styles.imgMenu} source={menuServico} />
           </View>
         </View>
-
       </View>
     );
   }

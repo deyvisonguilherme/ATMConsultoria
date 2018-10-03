@@ -1,13 +1,25 @@
 import { createStackNavigator } from 'react-navigation';
+import AuthScreen from './scene/authentication';
+import PerfilScreen from './scene/perfil';
 import HomeScreen from './scene/home';
-import ClientScreen from './scene/clients';
+import MapScreen from './scene/map';
+import QuestionScreen from './scene/questions';
+import SigninScreen from './scene/signin';
+import SignupScreen from './scene/signup';
+import WelcomeScreen from './scene/welcome';
 
 const RootStack = createStackNavigator(
   {
+    Auth: AuthScreen,
+    Clients: PerfilScreen,
     Home: HomeScreen,
-    Clients: ClientScreen,
+    Map: MapScreen,
+    Question: QuestionScreen,
+    Signin: SigninScreen,
+    Signup: SignupScreen,
+    Welcome: WelcomeScreen,
   },
-  { initialRouteName: 'Home' },
+  { initialRouteName: 'Welcome' }
 );
 
 export default RootStack;

@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-  View,
-  StatusBar,
-  Image,
-  Text,
-  StyleSheet,
-} from 'react-native';
+import { View, StatusBar, Image, Text, StyleSheet } from 'react-native';
 import BarraNavegacao from '../components/barraNavegacao';
 
 const detalheCliente = require('../../assets/detalhe_cliente.png');
@@ -27,12 +21,9 @@ const styles = StyleSheet.create({
     padding: 20,
     marginTop: 10,
   },
-  txtDetalheCliente: {
-
-  },
 });
 
-export default class ClientScreen extends React.Component {
+export default class PerfilScreen extends React.Component {
   render() {
     return (
       <View>
@@ -53,7 +44,6 @@ export default class ClientScreen extends React.Component {
           <Image source={cliente2} />
           <Text style={styles.txtDetalheCliente}>Loren lorein lorin</Text>
         </View>
-
       </View>
     );
   }

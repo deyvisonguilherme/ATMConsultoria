@@ -1,26 +1,14 @@
-import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { Header } from 'react-native-elements';
 
-const styles = StyleSheet.create({
-  barraTitulo: {
-    backgroundColor: '#ccc',
-    padding: 10,
-    height: 60,
-  },
-  titulo: {
-    flex: 1,
-    fontSize: 18,
-    textAlign: 'center',
-    color: '#000',
-  },
-});
-
-export default class BarraNavegacao extends Component {
+export default class BarraNavegacao extends React.Component {
   render() {
     return (
-      <View style={styles.barraTitulo}>
-        <Text style={styles.titulo}>ATM Consultoria</Text>
-      </View>
+      <Header
+        leftComponent={{ icon: 'menu', color: '#fff' }}
+        centerComponent={{ text: 'MY TITLE', style: { color: '#fff' } }}
+        rightComponent={{ icon: 'home', color: '#fff' }}
+      />
     );
   }
 }
